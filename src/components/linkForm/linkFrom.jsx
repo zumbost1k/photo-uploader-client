@@ -3,7 +3,6 @@ import './linkForm.css';
 import Tick from '../../photos/tick';
 
 const LinkForm = ({ downloadedImage }) => {
-  const link = 'https://images.yourdomain.com/photo-1496950866446-325...';
   return (
     <div className='uplouder uplouder-section__uplouder'>
       <div className='icon uplouder__icon'>
