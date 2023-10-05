@@ -19,10 +19,10 @@ const LinkForm = ({ downloadedImage }) => {
         height='235'
       />
       <div className='link-container uplouder__link-container'>
-        <p className='link-text link-container__link-text'>{link}</p>
+        <p className='link-text link-container__link-text'>{downloadedImage}</p>
         <button
           onClick={() => {
-            navigator.clipboard.writeText(link);
+            navigator.clipboard.writeText(downloadedImage);
           }}
           className='button link-container__button'
         >

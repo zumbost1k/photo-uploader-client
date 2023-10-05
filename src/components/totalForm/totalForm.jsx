@@ -33,12 +33,16 @@ const TotalForm = () => {
       data.append('downloadedImage', img);
 
       await axios
-        .post('/api/upload', data, {
+        .post('https://photo-uploader-server.onrender.com/api/upload', data, {
           headers: {
             'content-type': 'multipart/form-data',
           },
         })
-        .then((res) => setDownloadedImage(res.data.path))
+        .then((res) =>
+          setDownloadedImage(
+            `https://photo-uploader-server.onrender.com/${res.data.path}`
+          )
+        )
         .then(() => {
           setImageLoading(false);
         });
